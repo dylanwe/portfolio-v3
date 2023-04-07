@@ -2,7 +2,9 @@
 title: 'Send to Kobo'
 excerpt: "Make it easy to send books from online straight to your Kobo ereader."
 coverImage: '/assets/blog/send_to_kobo/cover.png'
+thumbnailImage: '/assets/blog/send_to_kobo/thumbnail.png'
 date: '2022-08-04T05:35:07.322Z'
+emoji: '📚'
 author:
   name: Dylan Weijgertze
   picture: '/assets/blog/authors/dylan.jpg'

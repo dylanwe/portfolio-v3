@@ -2,7 +2,9 @@
 title: 'Fizzy'
 excerpt: 'Helping you make and keep track of your workouts.'
 coverImage: '/assets/blog/fizzy/cover.png'
+thumbnailImage: '/assets/blog/fizzy/thumbnail.png'
 date: '2022-07-26T05:35:07.322Z'
+emoji: '🏋️‍♂️'
 author:
   name: Dylan Weijgertze
   picture: '/assets/blog/authors/dylan.jpg'

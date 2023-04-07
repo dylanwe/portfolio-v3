@@ -1,47 +1,53 @@
-import Avatar from './avatar'
-import DateFormatter from './date-formatter'
-import CoverImage from './cover-image'
-import Link from 'next/link'
-import type Author from '../interfaces/author'
+import DateFormatter from './date-formatter';
+import Link from 'next/link';
+import Image from 'next/image';
+import type Author from '../interfaces/author';
 
 type Props = {
-  title: string
-  coverImage: string
-  date: string
-  excerpt: string
-  author: Author
-  slug: string
-}
+	title: string;
+	thumbnailImage: string;
+	date: string;
+	excerpt: string;
+	emoji: string;
+	author: Author;
+	slug: string;
+};
 
 const PostPreview = ({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
+	title,
+  thumbnailImage,
+	date,
+	excerpt,
+	emoji,
+	author,
+	slug
 }: Props) => {
-  return (
-    <div>
-      <div className="mb-5">
-        <CoverImage slug={slug} title={title} src={coverImage} />
-      </div>
-      <h3 className="text-3xl mb-3 leading-snug">
-        <Link
-          as={`/posts/${slug}`}
-          href="/posts/[slug]"
-          className="hover:underline"
-        >
-          {title}
-        </Link>
-      </h3>
-      <div className="text-lg mb-4">
-        <DateFormatter dateString={date} />
-      </div>
-      <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-      <Avatar name={author.name} picture={author.picture} />
-    </div>
-  )
-}
+	return (
+		<Link
+			href={`/posts/${slug}`}
+			className="bg-neutral-100 hover:bg-neutral-50 hover:scale-[102%] rounded-2xl flex overflow-clip hover:shadow-xl transition-all duration-500"
+		>
+			<div className="flex-1 p-16 pr-12 flex flex-col">
+				<div className="flex h-12 w-12 bg-neutral-200 items-center justify-center text-2xl rounded-xl mb-4">
+					{emoji}
+				</div>
+				<h1 className="text-4xl font-bold text-neutral-800">{title}</h1>
+				<span className="text-lg">
+					<DateFormatter dateString={date} />
+				</span>
+				<p className="text-lg text-neutral-600 py-4">{excerpt}</p>
+			</div>
+			<div className="flex-1 relative pt-6">
+				<Image
+					src={thumbnailImage}
+					alt={`Cover Image for ${title}`}
+					className='bottom-0 absolute'
+					width={600}
+					height={630}
+				/>
+			</div>
+		</Link>
+	);
+};
 
-export default PostPreview
+export default PostPreview;
