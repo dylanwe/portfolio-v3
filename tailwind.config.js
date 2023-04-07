@@ -5,7 +5,7 @@ export const content = ['./components/**/*.tsx', './pages/**/*.tsx']
 export const theme = {
   extend: {
     colors: {
-      primary: colors.sky,
+      primary: colors.cyan,
       neutral: colors.slate,
     },
     spacing: {
