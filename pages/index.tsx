@@ -33,7 +33,6 @@ export const getStaticProps = async () => {
     'date',
     'slug',
     'emoji',
-    'author',
     'thumbnailImage',
     'excerpt',
   ])

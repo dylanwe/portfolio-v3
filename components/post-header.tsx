@@ -1,6 +1,5 @@
 import DateFormatter from './date-formatter'
 import CoverImage from './cover-image'
-import PostTitle from './post-title'
 
 type Props = {
   title: string
@@ -11,8 +10,10 @@ type Props = {
 const PostHeader = ({ title, coverImage, date }: Props) => {
   return (
     <>
-      <PostTitle>{title}</PostTitle>
-      <div className="mb-8 md:mb-16 sm:mx-0">
+    <h1 className="text-5xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">
+      {title}
+    </h1>
+      <div className="mb-8 md:mb-16 sm:mx-0 max-w-2xl mx-auto">
         <CoverImage title={title} src={coverImage} />
       </div>
       <div className="max-w-2xl mx-auto">
