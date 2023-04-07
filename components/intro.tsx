@@ -12,7 +12,7 @@ const aboutSection: Array<AboutMe> = [
 		icon: '🎓',
 		title: 'Education',
 		text: [
-			'2nd year Software Engineer @HVA 2021 - Current',
+			'Software Engineer @HVA 2021 - Current',
 			'Graduate Web Developer @GLU 2017 - 2021'
 		]
 	},
@@ -25,6 +25,11 @@ const aboutSection: Array<AboutMe> = [
 		icon: '🌎',
 		title: 'Languages',
 		text: ['🇳🇱 Dutch fluent', '🇬🇧 English C1']
+	},
+	{
+		icon: '🧑🏻‍💻',
+		title: 'Skills',
+		text: ['TypeScript, Kotlin, Java, MySQL, React', 'Scrum, Git']
 	}
 ];
 
@@ -38,17 +43,17 @@ const Intro = () => {
 					</div>
 				</div>
 				<h1 className="text-6xl text-neutral-800 mb-4">
-					Hi 👋 I’m Dylan!
+					Hi <span className='inline-block animate-[wave_.5s_ease-in-out_2]'>👋</span> I’m Dylan!
 				</h1>
 				<p className="text-neutral-600 text-lg mb-4">
 					I'm a Software Engineer student at the Amsterdam University
 					of Applied Sciences who enjoys programming and reading.
 				</p>
-				<p className="text-neutral-600 text-lg flex space-x-8 justify-center">
+				<p className="text-primary-600 text-lg flex space-x-8 justify-center">
 					<a
 						href="https://www.linkedin.com/in/dylan-weijgertze/"
 						target="_blank"
-						className="flex space-x-2 text-neutral-500 underline"
+						className="flex space-x-2 underline"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +68,7 @@ const Intro = () => {
 					<a
 						href="https://github.com/dylanwe"
 						target="_blank"
-						className="flex space-x-2 text-neutral-500 underline"
+						className="flex space-x-2 underline"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +82,7 @@ const Intro = () => {
 					</a>
 					<a
 						href="#projects"
-						className="flex space-x-2 text-neutral-500 underline"
+						className="flex space-x-2 underline"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +97,7 @@ const Intro = () => {
 				</p>
 			</header>
 
-			<section className="grid grid-cols-3 space-x-4">
+			<section className="grid grid-cols-2 gap-4 max-w-4xl mx-auto">
 				{aboutSection.map((about) => {
 					return (
 						<article className="bg-neutral-100 p-4 rounded-xl space-y-2">

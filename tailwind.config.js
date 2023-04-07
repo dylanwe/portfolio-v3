@@ -33,6 +33,16 @@ export const theme = {
       md: '0 8px 30px rgba(0, 0, 0, 0.12)',
     },
   },
+  keyframes: {
+    wiggle: {
+      '0%, 100%': { transform: 'translateY(0) rotate(-3deg)' },
+      '50%': { transform: 'translateY(-10px) rotate(3deg)' },
+    },
+    wave: {
+      '0%, 100%': { transform: 'translateY(0) rotate(0)' },
+      '50%': { transform: 'translateY(-10px) rotate(3deg)' },
+    }
+  }
 }
 export const plugins = [
   require('@tailwindcss/typography'),
