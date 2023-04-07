@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react';
 import avatar from '../public/assets/blog/authors/dylan.jpg';
+import background from '../public/assets/img/background.png';
 import Image from 'next/image';
 
 type AboutMe = {
@@ -34,16 +36,36 @@ const aboutSection: Array<AboutMe> = [
 ];
 
 const Intro = () => {
+	const [scrollY, setScrollY] = useState(0);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setScrollY(window.scrollY);
+		};
+
+		handleScroll();
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
 	return (
 		<section className="mt-16 mb-16 md:mb-12">
-			<header className="mb-12 text-center max-w-2xl mx-auto">
+			<header className="mb-12 text-center max-w-2xl mx-auto px-8">
 				<div className="flex items-center justify-center mb-6">
 					<div className="w-48 rounded-full overflow-clip">
 						<Image src={avatar} alt="pf" />
 					</div>
 				</div>
 				<h1 className="text-6xl text-neutral-800 mb-4">
-					Hi <span className='inline-block animate-[wave_.5s_ease-in-out_2]'>👋</span> I’m Dylan!
+					Hi{' '}
+					<span className="inline-block animate-[wave_.5s_ease-in-out_2]">
+						👋
+					</span>{' '}
+					I’m Dylan!
 				</h1>
 				<p className="text-neutral-600 text-lg mb-4">
 					I'm a Software Engineer student at the Amsterdam University
@@ -80,10 +102,7 @@ const Intro = () => {
 						</svg>
 						<span>GitHub</span>
 					</a>
-					<a
-						href="#projects"
-						className="flex space-x-2 underline"
-					>
+					<a href="#projects" className="flex space-x-2 underline">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="-5 -2 24 24"
@@ -97,10 +116,13 @@ const Intro = () => {
 				</p>
 			</header>
 
-			<section className="grid grid-cols-2 gap-4 max-w-4xl mx-auto">
+			<section className="grid grid-cols-2 gap-4 max-w-4xl mx-auto px-8">
 				{aboutSection.map((about) => {
 					return (
-						<article className="bg-neutral-100 p-4 rounded-xl space-y-2">
+						<article
+							key={about.icon}
+							className="bg-neutral-100 p-4 rounded-xl space-y-2"
+						>
 							<div className="flex h-12 w-12 bg-neutral-200 items-center justify-center text-2xl rounded-xl">
 								{about.icon}
 							</div>
@@ -109,13 +131,19 @@ const Intro = () => {
 							</h4>
 							<ul className="text-slate-600 text-sm list-disc list-inside">
 								{about.text.map((text) => {
-									return <li>{text}</li>;
+									return <li key={text}>{text}</li>;
 								})}
 							</ul>
 						</article>
 					);
 				})}
 			</section>
+			<Image
+				src={background}
+				alt=""
+				className='absolute top-0 -z-50 w-full transition-all ease-out duration-500 min-h-[600px] object-cover overflow-visible'
+				style={{transform: `scale(${1 + (scrollY / 5_000)})`, opacity: (scrollY < 500) ? 1 : 0, willChange: 'transform, opacity'}}
+			/>
 		</section>
 	);
 };

@@ -1,4 +1,3 @@
-import Container from '../components/container'
 import MoreStories from '../components/more-stories'
 import Intro from '../components/intro'
 import Layout from '../components/layout'
@@ -18,10 +17,10 @@ export default function Index({ allPosts }: Props) {
         <Head>
           <title>Dylan Weijgertze</title>
         </Head>
-        <Container>
+        <div>
           <Intro />
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
+        </div>
       </Layout>
     </>
   )

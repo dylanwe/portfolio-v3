@@ -29,7 +29,7 @@ export default function Post({ post, morePosts, preview }: Props) {
           <p>Loading…</p>
         ) : (
           <>
-            <article className="mb-32 max-w-2xl mx-auto">
+            <article className="mb-32 max-w-2xl mx-auto px-8">
               <Head>
                 <title>{title}</title>
                 <meta property="og:image" content={post.ogImage.url} />
