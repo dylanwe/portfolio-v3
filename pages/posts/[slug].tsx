@@ -23,14 +23,14 @@ export default function Post({ post, morePosts, preview }: Props) {
 		return <ErrorPage statusCode={404} />;
 	}
 	return (
-		<Layout preview={preview}>
+		<Layout>
 			<ThemeSwitch />
 			<Header />
 			{router.isFallback ? (
 				<p>Loading…</p>
 			) : (
 				<>
-					<article className="mb-32 max-w-2xl mx-auto px-8">
+					<article className="mb-32">
 						<Head>
 							<title>{title}</title>
 							<meta

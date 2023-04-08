@@ -54,7 +54,7 @@ const Intro = () => {
 
 	return (
 		<section className="mt-16 mb-16 md:mb-12">
-			<header className="mb-12 text-center max-w-2xl mx-auto px-8">
+			<header className="mb-12 text-center max-w-2xl mx-auto">
 				<div className="flex items-center justify-center mb-6">
 					<div className="w-48 rounded-full overflow-clip">
 						<Image src={avatar} alt="pf" />
@@ -116,7 +116,7 @@ const Intro = () => {
 				</p>
 			</header>
 
-			<section className="grid grid-cols-2 gap-4 max-w-4xl mx-auto px-8">
+			<section className="grid grid-cols-2 gap-4 mx-auto">
 				{aboutSection.map((about) => {
 					return (
 						<article
@@ -141,7 +141,7 @@ const Intro = () => {
 			<Image
 				src={background}
 				alt=""
-				className='absolute top-0 -z-50 w-full transition-all ease-out duration-500 min-h-[600px] object-cover'
+				className='fixed top-0 left-0 -z-50 w-full transition-all ease-out duration-500 min-h-[600px] object-cover'
 				style={{transform: `scale(${1 + (scrollY / 5_000)})`, opacity: (scrollY < 500) ? 1 : 0, willChange: 'transform, opacity'}}
 			/>
 		</section>
