@@ -3,6 +3,7 @@ title: 'Send to Kobo'
 excerpt: "Make it easy to send books from online straight to your Kobo ereader."
 coverImage: '/assets/blog/send_to_kobo/cover.png'
 thumbnailImage: '/assets/blog/send_to_kobo/thumbnail.png'
+technologies: [ tech1, tech2, tech3 ]
 date: '2022-08-04T05:35:07.322Z'
 emoji: '📚'
 author:

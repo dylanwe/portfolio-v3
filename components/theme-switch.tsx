@@ -103,7 +103,7 @@ const ThemeSwitch = () => {
 				>
 					{Object.values(Theme).map((theme) => {
 						return (
-							<li>
+							<li key={theme}>
 								<button
 									onClick={() => switchTheme(theme)}
 									className="flex items-center space-x-2 px-4 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-600 dark:hover:text-white w-full"

@@ -6,6 +6,7 @@ type PostType = {
   date: string
   coverImage: string
   thumbnailImage: string
+  technologies: string[]
   author: Author
   excerpt: string
   emoji: string

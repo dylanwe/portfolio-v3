@@ -1,57 +1,7 @@
-import { useEffect, useState } from 'react';
 import avatar from '../public/assets/blog/authors/dylan.jpg';
-import background from '../public/assets/img/background.png';
 import Image from 'next/image';
 
-type AboutMe = {
-	icon: string;
-	title: string;
-	text: string[];
-};
-
-const aboutSection: Array<AboutMe> = [
-	{
-		icon: '🎓',
-		title: 'Education',
-		text: [
-			'Software Engineer @HVA 2021 - Current',
-			'Graduate Web Developer @GLU 2017 - 2021'
-		]
-	},
-	{
-		icon: '💻',
-		title: 'Previous experience',
-		text: ['Web-developer intern @Otys 2020-2021']
-	},
-	{
-		icon: '🌎',
-		title: 'Languages',
-		text: ['🇳🇱 Dutch fluent', '🇬🇧 English C1']
-	},
-	{
-		icon: '🧑🏻‍💻',
-		title: 'Skills',
-		text: ['TypeScript, Kotlin, Java, MySQL, React', 'Scrum, Git']
-	}
-];
-
 const Intro = () => {
-	const [scrollY, setScrollY] = useState(0);
-
-	useEffect(() => {
-		const handleScroll = () => {
-			setScrollY(window.scrollY);
-		};
-
-		handleScroll();
-
-		window.addEventListener('scroll', handleScroll);
-
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	}, []);
-
 	return (
 		<section className="mt-16 mb-16 md:mb-12">
 			<header className="mb-12 text-center max-w-2xl mx-auto">
@@ -115,35 +65,6 @@ const Intro = () => {
 					</a>
 				</p>
 			</header>
-
-			<section className="grid grid-cols-2 gap-4 mx-auto">
-				{aboutSection.map((about) => {
-					return (
-						<article
-							key={about.icon}
-							className="bg-neutral-100 dark:bg-neutral-800 p-4 rounded-xl space-y-2"
-						>
-							<div className="flex h-12 w-12 bg-neutral-200 dark:bg-neutral-700 items-center justify-center text-2xl rounded-xl">
-								{about.icon}
-							</div>
-							<h4 className="text-lg text-neutral-800 dark:text-neutral-200 font-bold">
-								{about.title}
-							</h4>
-							<ul className="text-slate-600 dark:text-neutral-400 text-sm list-disc list-inside">
-								{about.text.map((text) => {
-									return <li key={text}>{text}</li>;
-								})}
-							</ul>
-						</article>
-					);
-				})}
-			</section>
-			<Image
-				src={background}
-				alt=""
-				className={`fixed top-0 left-0 -z-50 w-full transition-all ease-out duration-500 min-h-[600px] object-cover ${(scrollY < 500) ? 'opacity-100 dark:opacity-80' : 'opacity-0'}`}
-				style={{transform: `scale(${1 + (scrollY / 5_000)})`, willChange: 'transform, opacity'}}
-			/>
 		</section>
 	);
 };

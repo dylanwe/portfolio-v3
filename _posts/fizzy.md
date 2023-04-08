@@ -3,6 +3,7 @@ title: 'Fizzy'
 excerpt: 'Helping you make and keep track of your workouts.'
 coverImage: '/assets/blog/fizzy/cover.png'
 thumbnailImage: '/assets/blog/fizzy/thumbnail.png'
+technologies: [ tech1, tech2, tech3 ]
 date: '2022-07-26T05:35:07.322Z'
 emoji: '🏋️‍♂️'
 author:
