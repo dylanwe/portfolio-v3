@@ -18,14 +18,14 @@ const Intro = () => {
 					I’m Dylan!
 				</h1>
 				<p className="text-neutral-600 dark:text-neutral-400 text-lg mb-4">
-					I'm a Software Engineer student at the Amsterdam University
-					of Applied Sciences who enjoys programming and reading.
+					I'm a Software Engineer student at the <a href="https://www.hva.nl/" target="_blank" className="text-primary-600 font-medium">Amsterdam University
+					of Applied Sciences</a> who enjoys programming and reading.
 				</p>
-				<p className="text-primary-600 text-lg flex space-x-8 justify-center">
+				<p className="text-primary-500 font-medium text-lg flex space-x-8 justify-center">
 					<a
 						href="https://www.linkedin.com/in/dylan-weijgertze/"
 						target="_blank"
-						className="flex space-x-2 underline hover:text-primary-500 transition-colors"
+						className="flex space-x-2 underline"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@ const Intro = () => {
 					<a
 						href="https://github.com/dylanwe"
 						target="_blank"
-						className="flex space-x-2 underline hover:text-primary-500 transition-colors"
+						className="flex space-x-2 underline"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@ const Intro = () => {
 						</svg>
 						<span>GitHub</span>
 					</a>
-					<a href="#projects" className="flex space-x-2 underline hover:text-primary-500 transition-colors">
+					<a href="#projects" className="flex space-x-2 underline">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="-5 -2 24 24"

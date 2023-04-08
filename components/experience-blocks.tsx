@@ -6,19 +6,6 @@ type AboutMe = {
 
 const aboutSection: Array<AboutMe> = [
 	{
-		icon: '🎓',
-		title: 'Education',
-		text: [
-			'Software Engineer @HVA 2021 - Current',
-			'Graduate Web Developer @GLU 2017 - 2021'
-		]
-	},
-	{
-		icon: '💻',
-		title: 'Previous experience',
-		text: ['Web-developer intern @Otys 2020-2021']
-	},
-	{
 		icon: '🌎',
 		title: 'Languages',
 		text: ['🇳🇱 Dutch fluent', '🇬🇧 English C1']
@@ -32,7 +19,30 @@ const aboutSection: Array<AboutMe> = [
 
 const ExperienceBlocks = () => {
 	return (
-		<section className="grid grid-cols-2 gap-4 mx-auto mb-12">
+		<section className="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto mb-12">
+			<article className="bg-neutral-100 dark:bg-neutral-800 p-4 rounded-xl space-y-2">
+				<div className="flex h-12 w-12 bg-neutral-200 dark:bg-neutral-700 items-center justify-center text-2xl rounded-xl">
+					🎓
+				</div>
+				<h4 className="text-lg text-neutral-800 dark:text-neutral-200 font-bold">
+					Education
+				</h4>
+				<ul className="text-slate-600 dark:text-neutral-400 text-sm list-disc list-inside">
+					<li>Software Engineer <a href="https://www.hva.nl/" target="_blank" className="text-primary-500 font-medium">@HVA</a> 2021-Current</li>
+					<li>Graduate Web Developer <a href="https://www.glu.nl/opleiding/webdesign/" target="_blank" className="text-primary-500 font-medium">@GLU</a> 2017-2021</li>
+				</ul>
+			</article>
+			<article className="bg-neutral-100 dark:bg-neutral-800 p-4 rounded-xl space-y-2">
+				<div className="flex h-12 w-12 bg-neutral-200 dark:bg-neutral-700 items-center justify-center text-2xl rounded-xl">
+					💻
+				</div>
+				<h4 className="text-lg text-neutral-800 dark:text-neutral-200 font-bold">
+					Previous experience
+				</h4>
+				<ul className="text-slate-600 dark:text-neutral-400 text-sm list-disc list-inside">
+					<li>Web-developer intern <a href="https://www.otys.nl/" target="_blank" className="text-primary-500 font-medium">@Otys</a> 2020-2021</li>
+				</ul>
+			</article>
 			{aboutSection.map((about) => {
 				return (
 					<article
