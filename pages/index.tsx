@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
 import Post from '../interfaces/post'
+import ThemeSwitch from '../components/theme-switch'
 
 type Props = {
   allPosts: Post[]
@@ -18,6 +19,7 @@ export default function Index({ allPosts }: Props) {
           <title>Dylan Weijgertze</title>
         </Head>
         <div>
+          <ThemeSwitch />
           <Intro />
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </div>

@@ -60,14 +60,14 @@ const Intro = () => {
 						<Image src={avatar} alt="pf" />
 					</div>
 				</div>
-				<h1 className="text-6xl text-neutral-800 mb-4">
+				<h1 className="text-6xl text-neutral-800 dark:text-neutral-200 mb-4">
 					Hi{' '}
 					<span className="inline-block animate-[wave_.5s_ease-in-out_2]">
 						👋
 					</span>{' '}
 					I’m Dylan!
 				</h1>
-				<p className="text-neutral-600 text-lg mb-4">
+				<p className="text-neutral-600 dark:text-neutral-400 text-lg mb-4">
 					I'm a Software Engineer student at the Amsterdam University
 					of Applied Sciences who enjoys programming and reading.
 				</p>
@@ -75,7 +75,7 @@ const Intro = () => {
 					<a
 						href="https://www.linkedin.com/in/dylan-weijgertze/"
 						target="_blank"
-						className="flex space-x-2 underline"
+						className="flex space-x-2 underline hover:text-primary-500 transition-colors"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,7 @@ const Intro = () => {
 					<a
 						href="https://github.com/dylanwe"
 						target="_blank"
-						className="flex space-x-2 underline"
+						className="flex space-x-2 underline hover:text-primary-500 transition-colors"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ const Intro = () => {
 						</svg>
 						<span>GitHub</span>
 					</a>
-					<a href="#projects" className="flex space-x-2 underline">
+					<a href="#projects" className="flex space-x-2 underline hover:text-primary-500 transition-colors">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="-5 -2 24 24"
@@ -121,15 +121,15 @@ const Intro = () => {
 					return (
 						<article
 							key={about.icon}
-							className="bg-neutral-100 p-4 rounded-xl space-y-2"
+							className="bg-neutral-100 dark:bg-neutral-800 p-4 rounded-xl space-y-2"
 						>
-							<div className="flex h-12 w-12 bg-neutral-200 items-center justify-center text-2xl rounded-xl">
+							<div className="flex h-12 w-12 bg-neutral-200 dark:bg-neutral-700 items-center justify-center text-2xl rounded-xl">
 								{about.icon}
 							</div>
-							<h4 className="text-lg text-neutral-800 font-bold">
+							<h4 className="text-lg text-neutral-800 dark:text-neutral-200 font-bold">
 								{about.title}
 							</h4>
-							<ul className="text-slate-600 text-sm list-disc list-inside">
+							<ul className="text-slate-600 dark:text-neutral-400 text-sm list-disc list-inside">
 								{about.text.map((text) => {
 									return <li key={text}>{text}</li>;
 								})}
@@ -141,7 +141,7 @@ const Intro = () => {
 			<Image
 				src={background}
 				alt=""
-				className='absolute top-0 -z-50 w-full transition-all ease-out duration-500 min-h-[600px] object-cover overflow-visible'
+				className='absolute top-0 -z-50 w-full transition-all ease-out duration-500 min-h-[600px] object-cover'
 				style={{transform: `scale(${1 + (scrollY / 5_000)})`, opacity: (scrollY < 500) ? 1 : 0, willChange: 'transform, opacity'}}
 			/>
 		</section>

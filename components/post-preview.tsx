@@ -22,17 +22,17 @@ const PostPreview = ({
 	return (
 		<Link
 			href={`/posts/${slug}`}
-			className="bg-neutral-100 hover:bg-neutral-50 hover:scale-[102%] rounded-2xl flex flex-col md:flex-row overflow-clip hover:shadow-xl transition-all duration-500"
+			className="bg-neutral-100 hover:bg-neutral-50 dark:bg-neutral-800 dark:hover:bg-neutral-700 hover:scale-[102%] rounded-2xl flex flex-col md:flex-row overflow-clip hover:shadow-xl transition-all duration-500"
 		>
 			<div className="flex-1 p-12 pb-4 md:p-16 md:pr-12 flex flex-col">
-				<div className="flex h-12 w-12 bg-neutral-200 items-center justify-center text-2xl rounded-xl mb-4">
+				<div className="flex h-12 w-12 bg-neutral-200 dark:bg-neutral-700 items-center justify-center text-2xl rounded-xl mb-4">
 					{emoji}
 				</div>
-				<h1 className="text-4xl font-bold text-neutral-800">{title}</h1>
-				<span className="text-lg">
+				<h1 className="text-4xl font-bold text-neutral-800 dark:text-neutral-200">{title}</h1>
+				<span className="text-lg text-neutral-800 dark:text-neutral-300">
 					<DateFormatter dateString={date} />
 				</span>
-				<p className="text-lg text-neutral-600 py-4">{excerpt}</p>
+				<p className="text-lg text-neutral-600 dark:text-neutral-400 py-4">{excerpt}</p>
 				<div>
 					<button
 						type="button"

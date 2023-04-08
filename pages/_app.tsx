@@ -1,7 +1,12 @@
-import { AppProps } from 'next/app'
-import '../styles/index.css'
-import '../styles/prismTheme.css'
+import { AppProps } from 'next/app';
+import { ThemeProvider } from 'next-themes';
+import '../styles/index.css';
+import '../styles/prismTheme.css';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+	return (
+		<ThemeProvider attribute="class">
+			<Component {...pageProps} />
+		</ThemeProvider>
+	);
 }
