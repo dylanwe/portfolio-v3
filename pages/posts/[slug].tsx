@@ -8,7 +8,7 @@ import { getPostBySlug, getAllPosts } from '../../lib/api';
 import Head from 'next/head';
 import markdownToHtml from '../../lib/markdownToHtml';
 import type PostType from '../../interfaces/post';
-import ThemeSwitch from '../../components/theme-switch';
+import Link from 'next/link';
 
 type Props = {
 	post: PostType;
@@ -24,7 +24,6 @@ export default function Post({ post, morePosts, preview }: Props) {
 	}
 	return (
 		<Layout>
-			<ThemeSwitch />
 			<Header />
 			{router.isFallback ? (
 				<p>Loading…</p>
@@ -42,6 +41,8 @@ export default function Post({ post, morePosts, preview }: Props) {
 							title={post.title}
 							coverImage={post.coverImage}
 							date={post.date}
+							technologies={post.technologies}
+							repository={post.repository}
 						/>
 						<PostBody content={post.content} />
 					</article>
@@ -63,6 +64,8 @@ export async function getStaticProps({ params }: Params) {
 		'date',
 		'slug',
 		'content',
+		'technologies',
+		'repository',
 		'ogImage',
 		'coverImage'
 	]);

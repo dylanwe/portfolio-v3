@@ -7,6 +7,7 @@ type PostType = {
   coverImage: string
   thumbnailImage: string
   technologies: string[]
+  repository: string
   author: Author
   excerpt: string
   emoji: string
