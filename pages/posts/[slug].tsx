@@ -8,7 +8,6 @@ import { getPostBySlug, getAllPosts } from '../../lib/api';
 import Head from 'next/head';
 import markdownToHtml from '../../lib/markdownToHtml';
 import type PostType from '../../interfaces/post';
-import Link from 'next/link';
 
 type Props = {
 	post: PostType;
@@ -33,8 +32,20 @@ export default function Post({ post, morePosts, preview }: Props) {
 						<Head>
 							<title>{title}</title>
 							<meta
+								property="description"
+								content={post.excerpt}
+							/>
+							<meta
 								property="og:image"
 								content={post.ogImage.url}
+							/>
+							<meta
+								property="og:title"
+								content={post.title}
+							/>
+							<meta
+								property="og:description"
+								content={post.excerpt}
 							/>
 						</Head>
 						<PostHeader
@@ -63,6 +74,7 @@ export async function getStaticProps({ params }: Params) {
 		'title',
 		'date',
 		'slug',
+		'excerpt',
 		'content',
 		'technologies',
 		'repository',
