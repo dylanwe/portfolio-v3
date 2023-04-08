@@ -28,11 +28,11 @@ const PostPreview = ({
 				<div className="flex h-12 w-12 bg-neutral-200 dark:bg-neutral-700 items-center justify-center text-2xl rounded-xl mb-4">
 					{emoji}
 				</div>
-				<h1 className="text-4xl font-bold text-neutral-800 dark:text-neutral-200">{title}</h1>
-				<span className="text-lg text-neutral-800 dark:text-neutral-300">
+				<h2 className="text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-200">{title}</h2>
+				<span className="md:text-lg text-neutral-800 dark:text-neutral-300">
 					<DateFormatter dateString={date} />
 				</span>
-				<p className="text-lg text-neutral-600 dark:text-neutral-400 py-4">{excerpt}</p>
+				<p className="md:text-lg text-neutral-600 dark:text-neutral-400 py-4">{excerpt}</p>
 				<div>
 					<button
 						type="button"

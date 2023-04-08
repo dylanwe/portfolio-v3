@@ -141,8 +141,8 @@ const Intro = () => {
 			<Image
 				src={background}
 				alt=""
-				className='fixed top-0 left-0 -z-50 w-full transition-all ease-out duration-500 min-h-[600px] object-cover'
-				style={{transform: `scale(${1 + (scrollY / 5_000)})`, opacity: (scrollY < 500) ? 1 : 0, willChange: 'transform, opacity'}}
+				className={`fixed top-0 left-0 -z-50 w-full transition-all ease-out duration-500 min-h-[600px] object-cover ${(scrollY < 500) ? 'opacity-100 dark:opacity-80' : 'opacity-0'}`}
+				style={{transform: `scale(${1 + (scrollY / 5_000)})`, willChange: 'transform, opacity'}}
 			/>
 		</section>
 	);
