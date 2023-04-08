@@ -22,7 +22,6 @@ const Meta = () => {
 				name="description"
 				content="Hey welcome to my portfolio, I'm Dylan Weijgertze a software engineer"
 			/>
-			<meta property="og:image" content={HOME_OG_IMAGE_URL} />
 			<meta property="og:title" content="Portfolio | Dylan Weijgertze" />
 			<meta property="og:description" content="Hey welcome to my portfolio, I'm Dylan Weijgertze a software engineer" />
 		</Head>

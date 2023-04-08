@@ -18,6 +18,7 @@ export default function Index({ allPosts }: Props) {
       <Layout>
         <Head>
           <title>"Portfolio | Dylan Weijgertze"</title>
+          <meta property="og:image" content="/assets/img/ogImage.jpg" />
         </Head>
         <div>
           <Intro />
