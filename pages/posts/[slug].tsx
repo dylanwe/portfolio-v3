@@ -15,7 +15,7 @@ type Props = {
 	preview?: boolean;
 };
 
-export default function Post({ post, morePosts, preview }: Props) {
+const Post = ({ post, morePosts, preview }: Props) => {
 	const router = useRouter();
 	const title = `${post.title} | Dylan Weijgertze`;
 	if (!router.isFallback && !post?.slug) {
@@ -39,10 +39,7 @@ export default function Post({ post, morePosts, preview }: Props) {
 								property="og:image"
 								content={post.ogImage.url}
 							/>
-							<meta
-								property="og:title"
-								content={post.title}
-							/>
+							<meta property="og:title" content={post.title} />
 							<meta
 								property="og:description"
 								content={post.excerpt}
@@ -61,7 +58,9 @@ export default function Post({ post, morePosts, preview }: Props) {
 			)}
 		</Layout>
 	);
-}
+};
+
+export default Post;
 
 type Params = {
 	params: {

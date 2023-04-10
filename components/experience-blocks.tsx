@@ -28,8 +28,28 @@ const ExperienceBlocks = () => {
 					Education
 				</h4>
 				<ul className="text-slate-600 dark:text-neutral-400 text-sm list-disc list-inside">
-					<li>Software Engineer <a href="https://www.hva.nl/" target="_blank" className="text-primary-500 font-medium">@HVA</a> 2021-Current</li>
-					<li>Graduate Web Developer <a href="https://www.glu.nl/opleiding/webdesign/" target="_blank" className="text-primary-500 font-medium">@GLU</a> 2017-2021</li>
+					<li>
+						Software Engineer{' '}
+						<a
+							href="https://www.hva.nl/"
+							target="_blank"
+							className="text-primary-500 font-medium"
+						>
+							@HVA
+						</a>{' '}
+						2021-Current
+					</li>
+					<li>
+						Graduate Web Developer{' '}
+						<a
+							href="https://www.glu.nl/opleiding/webdesign/"
+							target="_blank"
+							className="text-primary-500 font-medium"
+						>
+							@GLU
+						</a>{' '}
+						2017-2021
+					</li>
 				</ul>
 			</article>
 			<article className="bg-neutral-100 dark:bg-neutral-800 p-4 rounded-xl space-y-2">
@@ -40,7 +60,17 @@ const ExperienceBlocks = () => {
 					Previous experience
 				</h4>
 				<ul className="text-slate-600 dark:text-neutral-400 text-sm list-disc list-inside">
-					<li>Web-developer intern <a href="https://www.otys.nl/" target="_blank" className="text-primary-500 font-medium">@Otys</a> 2020-2021</li>
+					<li>
+						Web-developer intern{' '}
+						<a
+							href="https://www.otys.nl/"
+							target="_blank"
+							className="text-primary-500 font-medium"
+						>
+							@Otys
+						</a>{' '}
+						2020-2021
+					</li>
 				</ul>
 			</article>
 			{aboutSection.map((about) => {

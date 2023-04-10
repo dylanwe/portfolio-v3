@@ -18,8 +18,15 @@ const Intro = () => {
 					I’m Dylan!
 				</h1>
 				<p className="text-neutral-600 dark:text-neutral-400 text-lg mb-4">
-					I'm a Software Engineer student at the <a href="https://www.hva.nl/" target="_blank" className="text-primary-600 font-medium">Amsterdam University
-					of Applied Sciences</a> who enjoys programming and reading.
+					I'm a Software Engineer student at the{' '}
+					<a
+						href="https://www.hva.nl/"
+						target="_blank"
+						className="text-primary-600 font-medium"
+					>
+						Amsterdam University of Applied Sciences
+					</a>{' '}
+					who enjoys programming and reading.
 				</p>
 				<p className="text-primary-500 font-medium text-lg flex space-x-8 justify-center">
 					<a

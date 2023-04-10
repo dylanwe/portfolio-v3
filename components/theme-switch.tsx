@@ -68,16 +68,16 @@ const ThemeSwitch = () => {
 					</svg>
 				);
 		}
-	}
+	};
 
 	const switchTheme = (theme: string) => {
 		setTheme(theme);
 		setMenuOpen(false);
-	}
+	};
 
 	const capitalizeFirstLetter = (str: string): string => {
 		return str.slice(0, 1).toUpperCase() + str.slice(1);
-	}
+	};
 
 	return (
 		<div className="fixed top-8 right-8">
