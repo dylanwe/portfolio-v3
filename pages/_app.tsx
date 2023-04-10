@@ -4,11 +4,11 @@ import '../styles/index.css';
 import '../styles/prismTheme.css';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-	return (
-		<ThemeProvider attribute="class">
-			<Component {...pageProps} />
-		</ThemeProvider>
-	);
+    return (
+        <ThemeProvider attribute="class">
+            <Component {...pageProps} />
+        </ThemeProvider>
+    );
 };
 
 export default MyApp;

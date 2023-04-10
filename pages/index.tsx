@@ -8,46 +8,46 @@ import ExperienceBlocks from '../components/experience-blocks';
 import IntroImage from '../components/intro-image';
 
 type Props = {
-	allPosts: Post[];
+    allPosts: Post[];
 };
 
 const Index = ({ allPosts }: Props) => {
-	const morePosts = allPosts;
-	return (
-		<>
-			<Layout>
-				<Head>
-					<title>"Portfolio | Dylan Weijgertze"</title>
-					<meta
-						property="og:image"
-						content="/assets/img/ogImage.png"
-					/>
-				</Head>
-				<div>
-					<Intro />
-					<IntroImage />
-					<ExperienceBlocks />
-					{morePosts.length > 0 && <MoreStories posts={morePosts} />}
-				</div>
-			</Layout>
-		</>
-	);
+    const morePosts = allPosts;
+    return (
+        <>
+            <Layout>
+                <Head>
+                    <title>"Portfolio | Dylan Weijgertze"</title>
+                    <meta
+                        property="og:image"
+                        content="/assets/img/ogImage.png"
+                    />
+                </Head>
+                <div>
+                    <Intro />
+                    <IntroImage />
+                    <ExperienceBlocks />
+                    {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+                </div>
+            </Layout>
+        </>
+    );
 };
 
 export default Index;
 
 export const getStaticProps = async () => {
-	const allPosts = getAllPosts([
-		'title',
-		'date',
-		'slug',
-		'emoji',
-		'technologies',
-		'thumbnailImage',
-		'excerpt'
-	]);
+    const allPosts = getAllPosts([
+        'title',
+        'date',
+        'slug',
+        'emoji',
+        'technologies',
+        'thumbnailImage',
+        'excerpt',
+    ]);
 
-	return {
-		props: { allPosts }
-	};
+    return {
+        props: { allPosts },
+    };
 };
