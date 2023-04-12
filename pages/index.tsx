@@ -17,7 +17,7 @@ const Index = ({ allPosts }: Props) => {
         <>
             <Layout>
                 <Head>
-                    <title>"Portfolio | Dylan Weijgertze"</title>
+                    <title>Portfolio | Dylan Weijgertze</title>
                     <meta
                         property="og:image"
                         content="/assets/img/ogImage.png"
