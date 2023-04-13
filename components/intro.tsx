@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Intro = () => {
     return (
-        <section className="mt-16 mb-16 md:mb-12">
+        <section className="pt-16 mb-16 md:mb-12">
             <header className="mb-12 text-center max-w-2xl mx-auto">
                 <div className="flex items-center justify-center mb-6">
                     <div className="w-48 rounded-full overflow-clip">
