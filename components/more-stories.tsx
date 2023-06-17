@@ -10,7 +10,7 @@ type Props = {
 const MoreStories = ({ posts }: Props) => {
     return (
         <section id="projects">
-            <h2 className="mb-8 text-3xl md:text-5xl tracking-tighter leading-tight text-neutral-800 dark:text-neutral-200">
+            <h2 className="mb-8 text-3xl md:text-5xl leading-tight text-neutral-800 dark:text-neutral-200">
                 Projects
             </h2>
             <div className="grid grid-cols-1 gap-y-12 mb-32">
