@@ -94,8 +94,8 @@ const ThemeSwitch = () => {
             <div
                 id="dropdownDivider"
                 className={`${
-                    isMenuOpen ? '' : 'hidden'
-                } z-10 bg-white divide-y divide-neutral-100 rounded-lg shadow w-44 dark:bg-neutral-700 dark:divide-neutral-600`}
+                    isMenuOpen ? '' : 'invisible opacity-0 translate-y-0'
+                } z-10 bg-white border divide-y divide-neutral-100 rounded-lg shadow-2xl w-44 dark:bg-neutral-700 dark:border-neutral-600 dark:divide-neutral-600 transition-all ease-in-out translate-y-2`}
             >
                 <ul
                     className="py-2 text-sm text-neutral-700 dark:text-neutral-200"

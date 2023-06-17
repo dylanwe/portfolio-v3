@@ -4,7 +4,7 @@ type Props = {
 
 const PostBody = ({ content }: Props) => {
     return (
-        <div className="prose md:prose-lg dark:prose-invert max-w-2xl mx-auto">
+        <div className="prose md:prose-lg dark:prose-invert flex mx-0">
             <div dangerouslySetInnerHTML={{ __html: content }} />
         </div>
     );

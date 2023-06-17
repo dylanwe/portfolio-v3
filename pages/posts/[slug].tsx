@@ -23,39 +23,44 @@ const Post = ({ post, morePosts, preview }: Props) => {
     }
     return (
         <Layout>
-            <Header />
-            {router.isFallback ? (
-                <p>Loading…</p>
-            ) : (
-                <>
-                    <article className="mb-32">
-                        <Head>
-                            <title>{title}</title>
-                            <meta
-                                property="description"
-                                content={post.excerpt}
+            <div className="max-w-2xl mx-auto">
+                <Header title={post.title} />
+                {router.isFallback ? (
+                    <p>Loading…</p>
+                ) : (
+                    <>
+                        <article className="mb-32 max-w-3xl">
+                            <Head>
+                                <title>{title}</title>
+                                <meta
+                                    property="description"
+                                    content={post.excerpt}
+                                />
+                                <meta
+                                    property="og:image"
+                                    content={post.ogImage.url}
+                                />
+                                <meta
+                                    property="og:title"
+                                    content={post.title}
+                                />
+                                <meta
+                                    property="og:description"
+                                    content={post.excerpt}
+                                />
+                            </Head>
+                            <PostHeader
+                                title={post.title}
+                                coverImage={post.coverImage}
+                                date={post.date}
+                                technologies={post.technologies}
+                                repository={post.repository}
                             />
-                            <meta
-                                property="og:image"
-                                content={post.ogImage.url}
-                            />
-                            <meta property="og:title" content={post.title} />
-                            <meta
-                                property="og:description"
-                                content={post.excerpt}
-                            />
-                        </Head>
-                        <PostHeader
-                            title={post.title}
-                            coverImage={post.coverImage}
-                            date={post.date}
-                            technologies={post.technologies}
-                            repository={post.repository}
-                        />
-                        <PostBody content={post.content} />
-                    </article>
-                </>
-            )}
+                            <PostBody content={post.content} />
+                        </article>
+                    </>
+                )}
+            </div>
         </Layout>
     );
 };
