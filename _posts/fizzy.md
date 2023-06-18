@@ -3,50 +3,52 @@ title: 'Fizzy'
 excerpt: 'Helping you make and keep track of your workouts.'
 coverImage: '/assets/blog/fizzy/cover.png'
 thumbnailImage: '/assets/blog/fizzy/thumbnail.png'
-technologies: [ TypeScript, MySQL ]
+technologies: [TypeScript, MySQL]
 repository: 'https://github.com/dylanwe/fizzy-fitness-app'
 date: '2022-07-26T05:35:07.322Z'
 emoji: '🏋️‍♂️'
 author:
-  name: Dylan Weijgertze
-  picture: '/assets/blog/authors/dylan.jpg'
+    name: Dylan Weijgertze
+    picture: '/assets/blog/authors/dylan.jpg'
 ogImage:
-  url: '/assets/blog/fizzy/cover.png'
+    url: '/assets/blog/fizzy/cover.png'
 ---
 
-This project was made as I read up more about fitness and the effects it had on the body and mind. I was heavily inspired by the app [Strong](https://www.strong.app/) which doesn’t have a website, so I decided to try and make my own version of that. The name Fizzy is quite silly I’ll admit that, it came from physique then became Physi and finally Fizzy.
-Here is a [demo video](https://youtu.be/RcGxFgKqzA4) of the project.
+This project was inspired by my research on fitness and its effects on the body and mind. I drew inspiration from the app [Strong](https://www.strong.app/), which unfortunately doesn't have a website. As a result, I decided to create my own version of it. The name "Fizzy" might sound a bit silly, but it evolved from "physique" to "Physi" and finally became "Fizzy." You can check out a [demo video](https://youtu.be/RcGxFgKqzA4) of the project.
 
 ## The code
-During school I worked on a project which was build with Express.js in the MVC structure. I quite liked working more with Node.js so when I decided to do a side project I started using Node.js and Express again, but I also wanted to try something new, so I added TypeScript for the backend and frontend.
 
-TypeScript is a superset of JavaScript meaning that in my experience translates nicely. What I loved about using TypeScript was the addition of types, meaning I could write safer code and it provided me with better hints on what I wanted to do. An example of types is shown below, where we see the type for `id` = `number` and the return type being `Promise<User>`.
+During my time in school, I worked on a project built with Express.js using the MVC structure. I enjoyed working with Node.js, so when I started this side project, I decided to use Node.js and Express again. However, I also wanted to try something new, so I incorporated TypeScript for both the backend and frontend.
+
+TypeScript, being a superset of JavaScript, was a seamless transition for me. What I appreciated most about using TypeScript was the ability to add types to my code, enabling safer coding practices and providing helpful hints. Here's an example that demonstrates the use of types, where the `id` parameter has a type of `number`, and the return type is `Promise<User>`:
 
 ```typescript
 /**
-* Get a user by his id
-*
-* @param id the id of the user
-* @returns a user
-*/
+ * Get a user by his id
+ *
+ * @param id the id of the user
+ * @returns a user
+ */
 export const getUserById = async (id: number): Promise<User> => {
-	const [users]: any = await db.query(
-		'SElECT id, email, username, apikey FROM user WHERE id = ?',
-		[id]
-	);
-	
-	return users[0] as User;
+    const [users]: any = await db.query(
+        'SElECT id, email, username, apikey FROM user WHERE id = ?',
+        [id]
+    );
+
+    return users[0] as User;
 };
 ```
 
 ![Fizzy showcase](/assets/blog/fizzy/fizzy-showcase.png)
 
 ## Things I learned
-- Writing TypeScript
-- Adding custom types
-- Adding user authentication with Passport.js
+
+-   Writing TypeScript
+-   Adding custom types
+-   Adding user authentication with Passport.js
 
 ## Things I would do differently
-I happen to be reusing some views a lot, which makes me think that going with a framework like React, Svelte, or Vue or their meta framework Next, Nuxt, or Svelte kit would have been better a better fit for this project. I will be using one of these frameworks in my next school year, making it quite useful to already have some experience with it before then.
 
-Another thing I would have done is look more into types because I still added a lot of `any` types.
+In hindsight, I realize that I ended up reusing some views quite a lot. This makes me believe that using a framework like React, Svelte, Vue, or their meta frameworks (Next, Nuxt, Svelte Kit) would have been a better fit for this project. Fortunately, I plan to use one of these frameworks in the upcoming school year, so it's valuable to have gained some experience with them beforehand.
+
+Another aspect I would improve is my utilization of types. I still used `any` types in several instances, and I should have explored using more precise types instead.
