@@ -14,7 +14,7 @@ ogImage:
     url: '/assets/blog/recall/cover.jpg'
 ---
 
-This project was a school assignment completed by a team of four in collaboration with [Move Agency](https://www.moveagency.com/en/). Move is a mobile-first agency specializing in app development for major companies
+This project was a school assignment completed by a team of four in collaboration with [Move Agency](https://www.moveagency.com/en/). Move is a mobile-first agency specializing in app development for major companies.
 
 Within a 10-week timeframe, we developed Recall, an Android app designed to enhance studying efficiency using flashcards. The app optimizes learning by displaying cards that have been answered correctly less frequently. Flashcards are organized into decks, such as a Mandarin Deck containing Mandarin flashcards. Additionally, we implemented a community page where users can share and explore decks created by others.
 
