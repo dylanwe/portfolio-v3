@@ -30,7 +30,7 @@ Within a 10-week timeframe, we developed Recall, an Android app designed to enha
 
 During this project I worked on the deck overview page, the whole API and every community page.
 
-![demo of using the website](/assets/blog/recall/community_deck.jpg)
+![community deck overview and card](/assets/blog/recall/community_deck.jpg)
 
 ## Idea and design
 
@@ -40,7 +40,7 @@ Using Figma, I designed several screens that were well-received by the team. To 
 
 ## Development
 
-![demo of using the website](/assets/blog/recall/dev.jpg)
+![development](/assets/blog/recall/dev.jpg)
 
 We adopted Move's app development process and techniques for this project. We utilized CLEAN architecture to achieve a separation of concerns, and modularized the different parts of CLEAN to reduce build time. Throughout the project, we gained experience working with the following technologies:
 
@@ -61,7 +61,7 @@ Using Ktor for the API would increase sharable code across the project making it
 
 ## Reflection
 
-![demo of using the website](/assets/blog/recall/team.jpg)
+![team sitting around table](/assets/blog/recall/team.jpg)
 
 During this project, I aimed to improve my professional communication, presentation, and documentation skills.
 
