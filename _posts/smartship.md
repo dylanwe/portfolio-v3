@@ -14,32 +14,32 @@ ogImage:
     url: '/assets/blog/smartship/cover.png'
 ---
 
-This project was a school assignment which I did in a group of five for a real company "[SmartShip](https://www.smart-ship.eu/)".
+This project was a school assignment that I worked on as part of a team of five for a real company, [SmartShip](https://www.smart-ship.eu/).
 
-The SmartShip dashboard is a specialized tool for 
-ship captains using SmartShip controls. It provides a centralized location for viewing and customizing relevant
-ship data.
+The SmartShip dashboard is a specialized tool designed for ship captains who use SmartShip controls. It serves as a centralized platform for viewing and customizing relevant ship data.
 
-We created a customizable dashboard with drag-and-drop functionality, allowing users to personalize their experience.
-Our login feature uses JWT and refresh tokens for security and maintainability, with a sign-in page that accepts
-email and password.
+Our team developed a customizable dashboard with drag-and-drop functionality, enabling users to personalize their experience. To ensure security and maintainability, we implemented a login feature using JWT and refresh tokens. The sign-in page accepts email and password for authentication.
 
-## Chosen project 🎉
-We worked with scrum getting feedback from the customer we worked for. In the end we had a big presentation for
-them showing everything we had. Out of the 6 groups for this customer we where the chosen project that they wanted to have.
+## Winning project 🎉
 
-## What we would do differently
-- SpringBoot Security for security implementation
-- Axios for handling fetch intercepts
-- TypeScript for better type checking
-- WebSockets for the notification and alert
-- Using Next.js or Nuxt.js for faster page loading and an easier-to-understand structure.
+Throughout the project, we followed the Scrum framework and actively sought feedback from the customer we were working for. In the end, we delivered a comprehensive presentation showcasing our progress. Among the six groups working on projects for this customer, our team's project was chosen as the preferred solution.
+
+## Areas for Improvement
+
+Reflecting on our project, there are several areas where we would make different choices if given the chance:
+
+-   Implementing SpringBoot Security for enhanced security measures
+-   Utilizing Axios to handle fetch intercepts effectively
+-   Incorporating TypeScript for improved type checking
+-   Integrating WebSockets for notifications and alerts
+-   Considering the use of Next.js or Nuxt.js for faster page loading and a more intuitive project structure.
 
 ## Reflection
-The following feedback was given to me by my team.
-- Heplful
-- Did a lot of work
-- Worked to quickly sometimes
 
-I sometimes did a lot of work even in the vacations causing a lot of change and progess, this is good but
-can be overwhelming. I really liked working with this team and it felt like we really tried making something cool.
+My team provided me with the following feedback:
+
+-   Helpful
+-   Contributed significantly to the workload
+-   Occasionally worked too quickly
+
+I acknowledge that I sometimes took on a substantial amount of work, even during vacations, which could be overwhelming. However, I thoroughly enjoyed collaborating with the team, and it felt rewarding to create something remarkable together.
