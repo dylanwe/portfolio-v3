@@ -21,13 +21,14 @@ const ExperienceBlocks = () => {
     return (
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto mb-12">
             <article className="bg-neutral-100 dark:bg-neutral-800 p-4 rounded-xl space-y-2">
-                <div className="flex h-12 w-12 bg-neutral-200 dark:bg-neutral-700 items-center justify-center text-2xl rounded-xl">
+                <div
+                    className="flex h-12 w-12 bg-neutral-200 dark:bg-neutral-700 items-center justify-center text-2xl rounded-xl">
                     🎓
                 </div>
                 <h4 className="text-lg text-neutral-800 dark:text-neutral-200 font-bold">
                     Education
                 </h4>
-                <ul className="text-slate-600 dark:text-neutral-400 text-sm list-disc list-inside">
+                <ul className="px-4 text-slate-600 dark:text-neutral-400 text-sm list-disc list-outside space-y-2">
                     <li>
                         Software Engineer{' '}
                         <a
@@ -37,7 +38,9 @@ const ExperienceBlocks = () => {
                         >
                             @HVA
                         </a>{' '}
-                        2021-Current
+                        <div>
+                            2021-Present
+                        </div>
                     </li>
                     <li>
                         Graduate Web Developer{' '}
@@ -48,18 +51,34 @@ const ExperienceBlocks = () => {
                         >
                             @GLU
                         </a>{' '}
-                        2017-2021
+                        <div>
+                            2017-2021
+                        </div>
                     </li>
                 </ul>
             </article>
             <article className="bg-neutral-100 dark:bg-neutral-800 p-4 rounded-xl space-y-2">
-                <div className="flex h-12 w-12 bg-neutral-200 dark:bg-neutral-700 items-center justify-center text-2xl rounded-xl">
+                <div
+                    className="flex h-12 w-12 bg-neutral-200 dark:bg-neutral-700 items-center justify-center text-2xl rounded-xl">
                     💻
                 </div>
                 <h4 className="text-lg text-neutral-800 dark:text-neutral-200 font-bold">
                     Previous experience
                 </h4>
-                <ul className="text-slate-600 dark:text-neutral-400 text-sm list-disc list-inside">
+                <ul className="px-4 text-slate-600 dark:text-neutral-400 text-sm list-disc list-outside space-y-2">
+                    <li>
+                        Software Engineer intern{' '}
+                        <a
+                            href="https://www.ah.nl/"
+                            target="_blank"
+                            className="text-primary-500 font-medium"
+                        >
+                            @Albert Heijn
+                        </a>{' '}
+                        <div>
+                            2023-Present
+                        </div>
+                    </li>
                     <li>
                         Web-developer intern{' '}
                         <a
@@ -69,7 +88,9 @@ const ExperienceBlocks = () => {
                         >
                             @Otys
                         </a>{' '}
-                        2020-2021
+                        <div>
+                            2020-2021
+                        </div>
                     </li>
                 </ul>
             </article>
@@ -79,7 +100,8 @@ const ExperienceBlocks = () => {
                         key={about.icon}
                         className="bg-neutral-100 dark:bg-neutral-800 p-4 rounded-xl space-y-2"
                     >
-                        <div className="flex h-12 w-12 bg-neutral-200 dark:bg-neutral-700 items-center justify-center text-2xl rounded-xl">
+                        <div
+                            className="flex h-12 w-12 bg-neutral-200 dark:bg-neutral-700 items-center justify-center text-2xl rounded-xl">
                             {about.icon}
                         </div>
                         <h4 className="text-lg text-neutral-800 dark:text-neutral-200 font-bold">
