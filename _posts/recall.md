@@ -73,7 +73,7 @@ My team & Move provided me with the following points and feedback:
 
 -   Integrated well with the company
 -   Takes a leading role during presenation and sprint reviews
--   Pace of presenting was too fast but was became a nice pace in later presentation
+-   Pace of presenting was too fast but became a nice pace in later presentation
 -   Asks for feedback and is open to change
 -   Knows how to formulate questions clearly and thoroughly
 -   Try to read less from the slides during presenting, it makes the presentation less engaging
